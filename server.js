@@ -36,7 +36,7 @@ app.use('/user', userRoutes);
 
 
 //create your schema
-createUserTable();
+createUsersTable();
 createFoodTable();
 
 
