@@ -30,7 +30,7 @@ exports.postAddFood = async (req, res) => {
   exports.getAllFood = async (req, res) => {
     try {
         const foodItems = await db.any('SELECT * FROM food_items ORDER BY created_at DESC');
-        res.render('admin/foodlist', { foods: foodItems });
+        res.render('admin/foodList', { foods: foodItems });
     }catch (error) {
         console.error('Error fetching food items:', error);
         res.status(500).send('Server error while fetching food items.');
