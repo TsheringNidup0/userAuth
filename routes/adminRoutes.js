@@ -10,7 +10,6 @@ router.post('/add-Food', adminController.postAddFood);
 
 
 router.get('/food', adminController.getAllFood);
-router.get('/foods', adminController.getAllFood);
 
 router.get('/edit-Food/:id', adminController.geteditFood);
 router.post('/EditFood/:id', adminController.postEditFood);
