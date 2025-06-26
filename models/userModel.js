@@ -1,4 +1,3 @@
-const e = require('express');
 const db = require('../config/db');
 
 //create a new user table if it doesn't exist
@@ -10,7 +9,7 @@ const createUsersTable = async () => {
                 name VARCHAR(50) UNIQUE NOT NULL,
                 email VARCHAR(100) UNIQUE NOT NULL,
                 password VARCHAR(255) NOT NULL,
-                role VARCHAR(20) DEFAULT 'users',
+                role VARCHAR(20) DEFAULT 'user',
                 is_verified BOOLEAN DEFAULT FALSE,
                 verification_token TEXT,
                 reset_token VARCHAR(255),

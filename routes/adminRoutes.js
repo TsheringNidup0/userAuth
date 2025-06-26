@@ -6,13 +6,13 @@ router.get('/dashboard', adminController.getDashboard);
 
 
 router.get('/add-Food', adminController.getAddfoodPage);
-router.post('/addFood', adminController.postAddFood);
+router.post('/add-Food', adminController.postAddFood);
 
 
 router.get('/food', adminController.getAllFood);
+router.get('/foods', adminController.getAllFood);
 
-
-router.get('/editFood/:id', adminController.geteditFood);
+router.get('/edit-Food/:id', adminController.geteditFood);
 router.post('/EditFood/:id', adminController.postEditFood);
 router.post('/deleteFood/:id', adminController.deleteFood);
 

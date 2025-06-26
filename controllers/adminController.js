@@ -18,13 +18,12 @@ exports.postAddFood = async (req, res) => {
     } 
 
     // insert food item into the database
-    await db.none('INSERT INTO food (name, description, image_url, price) VALUES ($1, $2, $3, $4)', 
-        [name, description, image_url, price]);
-
+    await db.none('INSERT INTO food_items (name, description, image_url, price) VALUES ($1, $2, $3, $4)', 
+    [name, description, image_url, price]);
     res.redirect('/admin/food');
 } catch (error) {
     console.error('Error adding food item:', error);
-    res.rstatus(500).send('Server error while adding food item.');
+    res.status(500).send('Server error while adding food item.');
   }
 }
   // get all food items
